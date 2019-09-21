@@ -1,0 +1,93 @@
+:root {
+    --primary: #D83B2F;
+    --primary-text: var(--primary);
+    --primary-press: #e54e17;
+    --primary-disable: #ff9a76;
+    --primary-selected: #ffeee8;
+    --text-selected: var(--primary);
+}
+
+
+/* 辅助色 */
+
+:root {
+    --warning: #ff4040;
+    --success: #1dbf6e;
+    --link: #4da6ff;
+    --background-notice: #fff2bd;
+    --background-warning: #fff1f0;
+}
+
+
+/* 中性色 */
+
+:root {
+    --text-title: #1b1c33;
+    --text-body: #5e5e66;
+    --text-caption: #8d8e99;
+    --text-hint: #b0b1b8;
+    --line-b: #d7d7db;
+    --line-c: #ededf0;
+    --press: #e3e3e6;
+    --background-page: #f2f3f5;
+    --background-block: #f7f8fa;
+    --white: #fff;
+    --text-anti: var(--white);
+    --mask: #000;
+}
+
+:root {
+    --font-highlight: var(--white);
+    --primary-highlight: var(--primary);
+    --primary-disable-select-color: #ffd2c2;
+}
+
+
+/* Font Size */
+
+:root {
+    --fs12: 12px;
+    --fs13: 13px;
+    --fs14: 14px;
+    --fs15: 15px;
+    --fs16: 16px;
+    --fs17: 17px;
+    --fs18: 18px;
+    --fs20: 20px;
+    --fs22: 22px;
+    --fs24: 24px;
+}
+
+
+/* border-radius */
+
+:root {
+    --border-radius-base: 4px;
+    --border-radius-large: 6px;
+    --border-radius-small: 3px;
+}
+
+
+/* font-family */
+
+:root {
+    --font-family: PingFangSC-Regular, Helvetica, "Droid Sans", Arial, sans-serif;
+}
+
+:root {
+    /* Font
+    -------------------------- */
+    --font-size-base: 14px;
+
+    /* Size
+    -------------------------- */
+    --size-base: 14px;
+
+    /* Badge
+    -------------------------- */
+    --badge-fill: var(--primary);
+    --badge-radius: 10px;
+    --badge-font-size: 12px;
+    --badge-padding: 5px;
+    --badge-size: 18px;
+}

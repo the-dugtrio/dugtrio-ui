@@ -1,0 +1,34 @@
+[{
+        "groupName": "common",
+        "groupAlias": "通用",
+        "children": []
+    },
+    {
+        "groupName": "layout",
+        "groupAlias": "布局",
+        "children": []
+    },
+    {
+        "groupName": "navigation",
+        "groupAlias": "导航",
+        "children": []
+    },
+    {
+        "groupName": "dataEntry",
+        "groupAlias": "数据录入",
+        "children": []
+    },
+    {
+        "groupName": "dataDisplay",
+        "groupAlias": "数据展示",
+        "children": [{
+            "name": "badge",
+            "cname": "标记"
+        }]
+    },
+    {
+        "groupName": "other",
+        "groupAlias": "其他",
+        "children": []
+    }
+]

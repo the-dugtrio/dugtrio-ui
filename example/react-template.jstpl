@@ -1,0 +1,85 @@
+import React, { Component } from 'react';
+IMPORTS
+
+DEMO_DECLARATIONS
+
+function RawHtmlRenderer(props) {
+  return <props.tag {...props.attributes} dangerouslySetInnerHTML={{ __html: props.html }}></props.tag>;
+}
+
+function Markdown(props) {
+  return <RawHtmlRenderer tag="section" html={props.html} attributes={{ className: 'dugtriodoc-react-markdown' }}/>;
+}
+
+function Style(props) {
+  return <RawHtmlRenderer tag="style" html={props.style} />;
+}
+
+function offsetY(element, offset) {
+  while(element) {
+    if (element.offsetTop && getComputedStyle(element)['position'] !== 'static') {
+      offset += element.offsetTop;
+    }
+    return offsetY(element.parentNode, offset);
+  }
+  return offset;
+}
+
+class Demo extends Component {
+  state = {
+    showCode: false
+  };
+
+  toggle = () => {
+    this.setState({
+      showCode: !this.state.showCode
+    });
+  };
+
+  render() {
+    const { showCode } = this.state;
+    const { title, src, children } = this.props;
+    return (
+      <div className="dugtriodoc-react-demo">
+        <div className="dugtriodoc-react-demo__preview">
+          {children}
+        </div>
+        <div className="dugtriodoc-react-demo__bottom" onClick={this.toggle}>
+          <div className="dugtriodoc-react-demo__title">
+            <p>{title || ''}</p>
+          </div>
+          <i
+            className={`negicon negicon-caret-up dugtriodoc-react-demo__toggle ${showCode ? 'dugtriodoc-react-demo__toggle-on' : 'dugtriodoc-react-demo__toggle-off'}`}
+          />
+        </div>
+        {showCode &&
+          <pre className="dugtriodoc-react-demo__code">
+            <RawHtmlRenderer
+              tag="code"
+              html={src}
+              attributes={{
+                className: 'language-jsx'
+              }}
+            />
+          </pre>
+        }
+      </div>
+    )
+  }
+}
+
+export default class dugtriodocContainer extends Component {
+  componentDidMount() {
+  }
+
+  render() {
+    return React.createElement(
+      'div',
+      {
+        className: 'dugtriodoc-react-container',
+        key: module.hot ? Math.random() : null
+      },
+      SECTIONS
+    );
+  }
+}

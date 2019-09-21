@@ -1,0 +1,104 @@
+.dugtriodoc-react-container {
+  .dugtriodoc-react-demo {
+    border-radius: 4px;
+    border: 1px solid #ebedf0;
+
+    &+.dugtriodoc-react-demo {
+      margin-top: 40px;
+    }
+
+    &__preview {
+      padding: 24px;
+    }
+
+    &__bottom {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px dashed #ebedf0;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+
+    &__toggle {
+      display: inline-block;
+      width: 70px;
+      height: 20px;
+      color: #ccd6e5;
+      font-size: 12px;
+      line-height: 20px;
+      flex: 0 0 auto;
+      //transition: 0.2s ease;
+      font-style: normal;
+      color: var(--primary);
+
+      &-on {
+        &::after {
+          content: "隐藏</>"
+        }
+      }
+
+      &-off {
+        //transform: rotate(180deg);
+
+        &::after {
+          content: "显示代码<>"
+        }
+      }
+    }
+
+    &__title {
+      flex: 1;
+      color: #666;
+      font-size: 14px;
+      min-height: 20px;
+      margin-right: 20px;
+    }
+
+    &__code {
+      border-top: 1px solid #ebedf0;
+
+      code[class*='language-'] {
+        margin: 0;
+      }
+    }
+  }
+
+  .anchor-heading {
+    a {
+      float: left;
+      margin-left: -20px;
+      opacity: 0;
+    }
+  }
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #008dff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #32a973;
+}
+
+.token.tag {
+  color: var(--primary);
+}
+
+.token.property,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #1976d2;
+}
